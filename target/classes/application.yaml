@@ -4,7 +4,7 @@ spring:
   application:
     name: hmdp
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/hmdp?useSSL=false&serverTimezone=UTC
     username: root
     password: 2360830103
@@ -20,6 +20,14 @@ spring:
         time-between-eviction-runs: 10s
   jackson:
     default-property-inclusion: non_null # JSON处理时忽略非空字段
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 2764636334@qq.com
+    password: ucgpsookdcdadhdf # 授权码
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
 mybatis-plus:
   type-aliases-package: com.hmdp.entity # 别名扫描包
 logging:
